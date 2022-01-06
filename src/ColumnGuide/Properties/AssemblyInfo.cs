@@ -15,7 +15,6 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(false)]
 
-[assembly: ProvideCodeBase(CodeBase = "Microsoft.ApplicationInsights.dll")]
 [assembly: ProvideCodeBase(CodeBase = "Microsoft.VisualStudio.CodingConventions.dll")]
 
 [assembly: InternalsVisibleTo("ColumnGuideTests")]

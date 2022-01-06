@@ -36,7 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.CodingConventions" Version="1.1.20180503.2" />
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.0-previews-1-31410-273" ExcludeAssets="runtime">
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -73,7 +72,6 @@
   <Target Name="IncludeNuGetPackageReferences" AfterTargets="GetVsixSourceItems">
     <ItemGroup>
       <_ReferenceCopyLocalBinaries Include="@(ReferenceCopyLocalPaths)" Condition="'%(Extension)' != '.pdb'" />
-      <VSIXSourceItem Include="@(_ReferenceCopyLocalBinaries)" Condition="'%(_ReferenceCopyLocalBinaries.NuGetPackageId)' == 'Microsoft.ApplicationInsights'" />
       <VSIXSourceItem Include="@(_ReferenceCopyLocalBinaries)" Condition="'%(_ReferenceCopyLocalBinaries.NuGetPackageId)' == 'Microsoft.VisualStudio.CodingConventions'" />
     </ItemGroup>
   </Target>
